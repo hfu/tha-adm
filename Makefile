@@ -2,6 +2,8 @@ DATASET_URL = https://data.humdata.org/dataset/d24bdc45-eb4c-4e3d-8b16-44db02667
 ZIP_FILE = tha_adm_rtsd_itos_20210121_shp.zip
 SRC_DIR = src
 DST_DIR = docs
+DST_URL = s3://smartmaps/foil4gr1/tha-adm/a.pmtiles
+ENDPOINT_OPTION = --endpoint-url=https://data.source.coop
 OUTPUT_PMTILES = $(DST_DIR)/a.pmtiles
 STYLE_PKL = style.pkl
 STYLE_JSON = $(DST_DIR)/style.json
@@ -54,5 +56,8 @@ style: $(STYLE_JSON)
 
 host: $(STYLE_JSON)
 	budo -d $(DST_DIR) -p $(HOST_PORT)
+
+upload:
+	aws s3 cp docs/a.pmtiles $(DST_URL) $(ENDPOINT_OPTION)
 
 .PHONY: download produce style host

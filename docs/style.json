@@ -10,7 +10,7 @@
   "sources": {
     "a": {
       "type": "vector",
-      "url": "pmtiles://a.pmtiles",
+      "url": "pmtiles://https://data.source.coop/smartmaps/foil4gr1/tha-adm/a.pmtiles",
       "attribution": "RTSD / OCHA"
     }
   },

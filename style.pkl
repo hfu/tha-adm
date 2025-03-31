@@ -1,4 +1,4 @@
-hidden pmtiles = "pmtiles://a.pmtiles"
+hidden pmtiles = "pmtiles://https://data.source.coop/smartmaps/foil4gr1/tha-adm/a.pmtiles"
 hidden background_color = "#3234F5"
 const background = "#A0E034"
 const foreground = "#E0DE34"
