@@ -1,0 +1,72 @@
+{
+  "background": "#A0E034",
+  "foreground": "#E0DE34",
+  "version": 8,
+  "zoom": 7.87,
+  "center": [
+    100.638,
+    13.589
+  ],
+  "sources": {
+    "a": {
+      "type": "vector",
+      "url": "pmtiles://a.pmtiles",
+      "attribution": "RTSD / OCHA"
+    }
+  },
+  "layers": [
+    {
+      "id": "background",
+      "type": "background",
+      "paint": {
+        "background-color": "#3234F5"
+      }
+    },
+    {
+      "id": "adm0",
+      "source-layer": "adm0",
+      "source": "a",
+      "type": "fill",
+      "paint": {
+        "fill-color": "#A0E034"
+      }
+    },
+    {
+      "id": "adm1",
+      "source-layer": "adm1",
+      "source": "a",
+      "type": "fill",
+      "paint": {
+        "fill-color": "#A0E034"
+      }
+    },
+    {
+      "id": "adm2",
+      "source-layer": "adm2",
+      "source": "a",
+      "type": "fill",
+      "paint": {
+        "fill-color": "#A0E034"
+      }
+    },
+    {
+      "id": "adm3",
+      "source-layer": "adm3",
+      "source": "a",
+      "type": "fill",
+      "paint": {
+        "fill-color": "#A0E034"
+      }
+    },
+    {
+      "id": "bndl",
+      "type": "line",
+      "source": "a",
+      "source-layer": "bndl",
+      "paint": {
+        "line-color": "#3234F5",
+        "line-width": 1
+      }
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+hidden pmtiles = "pmtiles://a.pmtiles"
+hidden background_color = "#3234F5"
+const background = "#A0E034"
+const foreground = "#E0DE34"
+
+class Adm {
+  id: String? `source-layer` = id
+  source = "a" type = "fill"
+  paint { `fill-color` = background }
+}
+
+version = 8
+zoom = 7.87
+center = new Listing {
+  100.638
+  13.589
+}
+sources {
+  a {
+    type = "vector" url = pmtiles
+    attribution = "RTSD / OCHA"
+  }
+}
+layers = new Listing {
+  new {
+    id = "background" type = "background"
+    paint { `background-color` = background_color }
+  }
+  new Adm { id = "adm0" }
+  new Adm { id = "adm1" }
+  new Adm { id = "adm2" }
+  new Adm { id = "adm3" }
+  new {
+    id = "bndl" type = "line" source = "a"
+    `source-layer` = "bndl"
+    paint { `line-color` = background_color `line-width` = 1 }
+  }
+}
